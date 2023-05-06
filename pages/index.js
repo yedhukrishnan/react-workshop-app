@@ -1,3 +1,9 @@
+import { useRouter } from 'next/router';
+
 export default function FirstPost() {
-  return <h1>Hello, Yedhu</h1>;
+  const router = useRouter();
+  const { query } = router;
+
+
+  return <h1>Hello, {query.name}</h1>;
 }
