@@ -1,10 +1,10 @@
-"use client";
-
-import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 
 export default function FirstPost() {
-  const searchParams = useSearchParams();
-  const name = searchParams.get("name");
+  const router = useRouter();
+  const { query } = router;
+
+  const name = query.name;
 
   if (name) {
     return (
@@ -13,7 +13,6 @@ export default function FirstPost() {
           textAlign: "center",
           background: "#ffdfd2",
           padding: "20px 10px",
-          color: "black",
         }}
       >
         Hello, {name}
