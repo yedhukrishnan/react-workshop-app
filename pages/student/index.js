@@ -28,9 +28,21 @@ export default function Student() {
       <button onClick={loadStudentData}>Submit</button>
 
       {studentData.student_id && (
-        <pre>{JSON.stringify(studentData, null, 2)}</pre>
+        <table>
+          <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Maths</th>
+            <th>Physics</th>
+          </tr>
+          <tr>
+            <td>{studentData.student_id}</td>
+            <td>{studentData.student_name}</td>
+            <td>{studentData.maths}</td>
+            <td>{studentData.physics}</td>
+          </tr>
+        </table>
       )}
-
     </div>
   );
 }
