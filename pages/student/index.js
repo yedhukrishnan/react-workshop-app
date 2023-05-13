@@ -4,6 +4,7 @@ import { read } from "@/lib/database";
 export default function Student() {
   const [studentId, setStudentId] = useState("");
   const [studentData, setStudentData] = useState({});
+  const [error, setError] = useState("");
 
   const loadStudentData = async () => {
     console.log(studentId);
@@ -11,6 +12,7 @@ export default function Student() {
     const { data, error } = await read(studentId);
     if (error) {
       console.log(error);
+      setError("Student ID not found");
     } else {
       console.log(data);
       setStudentData(data);
@@ -43,6 +45,8 @@ export default function Student() {
           </tr>
         </table>
       )}
+
+      {error && <p>{error}</p>}
     </div>
   );
 }
