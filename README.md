@@ -2,15 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Install the dependencies
+Install the dependencies and run the development server
 
 ```bash
 npm install
-```
-
-First, run the development server:
-
-```bash
 npm run dev
 ```
 
@@ -31,9 +26,23 @@ Create a new table in the database called "marks".
 
 If you are using a different table name, make sure to update it here: https://github.com/yedhukrishnan/react-workshop-app/blob/0da0ab9e5e6f59df146cf32000ed34c0c832542a/lib/database.js#L3). 
 
-Make sure to turn off row level security while creating the table.
+Turn off row level security while creating the table.
 
-Add the following columns and create a few rows if required:
+Add the following columns in the table and create a few rows if required:
 
 ![image](https://raw.githubusercontent.com/yedhukrishnan/react-workshop-app/main/images/table.png)
 
+Run the app and visit the paths: 
+
+- `localhost:3000/greet`
+- `localhost:3000/student`
+
+## Deployment
+
+<< To be updated >>
+
+Here is a deployed version of the app:
+
+Greet page: https://student-management-vp80du4a9-vpyedhukrishnan-gmailcom.vercel.app/greet
+
+Student Marks page (Use ID 123): https://student-management-vp80du4a9-vpyedhukrishnan-gmailcom.vercel.app/student
